@@ -1,0 +1,55 @@
+/* public/css/struk.css */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    width: 80mm;
+    margin: 0;
+    padding: 5mm;
+    color: #000;
+}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.fw-bold { font-weight: bold; }
+
+.header {
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    border-top: 1px dashed #000;
+    margin: 5px 0;
+}
+
+.item-table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.item-table td {
+    padding: 2px 0;
+}
+
+.total-section {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media print {
+    @page {
+        margin: 0;
+    }
+    .no-print {
+        display: none;
+    }
+}

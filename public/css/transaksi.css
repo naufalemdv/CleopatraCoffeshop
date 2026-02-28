@@ -1,0 +1,73 @@
+/* public/css/transaksi.css */
+
+/* ... (kode CSS tabel yang sudah ada) ... */
+
+/* SETTING KHUSUS CETAK STRUK */
+#receipt-print-area {
+    display: none; /* Sembunyikan dari layar utama */
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #receipt-print-area, #receipt-print-area * {
+        visibility: visible;
+    }
+    #receipt-print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Style Struk Kasir */
+.receipt-wrapper {
+    width: 300px; /* Standar printer thermal */
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: #000;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.receipt-header h5 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.receipt-divider {
+    border-top: 1px dashed #000;
+    margin: 10px 0;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.receipt-item-name {
+    display: block;
+    margin-bottom: 1px;
+}
+
+.receipt-item-detail {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    font-size: 11px;
+}
+
+.receipt-total {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}

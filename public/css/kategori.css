@@ -1,0 +1,85 @@
+/* public/css/kategori.css */
+
+/* Styling Search Bar mirip referensi gambar */
+.search-container {
+    max-width: 350px;
+}
+
+.search-input {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px 10px 40px; /* Padding kiri untuk ikon kaca pembesar */
+    font-size: 0.9rem;
+    box-shadow: none;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(254, 104, 7, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+}
+
+/* Styling Tabel Kategori */
+.table-custom {
+    vertical-align: middle;
+}
+
+.table-custom thead th {
+    border-bottom: 2px solid #f0f0f0;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 15px 10px;
+    text-transform: capitalize;
+}
+
+.table-custom tbody td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #f8f9fa;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Styling Status Badge mirip gambar referensi */
+.badge-status {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.status-aktif {
+    background-color: #d1f2e5; /* Hijau pastel */
+    color: #129c66; /* Hijau gelap */
+}
+
+.status-nonaktif {
+    background-color: #fde1e1; /* Merah pastel */
+    color: #d63333; /* Merah gelap */
+}
+
+/* Action Buttons (Edit & Delete) */
+.btn-action {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.btn-action:hover {
+    color: var(--accent-color);
+}

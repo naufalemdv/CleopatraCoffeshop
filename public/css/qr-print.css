@@ -1,0 +1,119 @@
+/* public/css/qr-print.css */
+body {
+    background-color: #525659; 
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.qr-card {
+    background-color: #ffffff;
+    width: 380px; /* Dipersempit sedikit agar lebih rapi */
+    border-radius: 20px;
+    border: 2px dashed #ccc; 
+    border-top: 15px solid #FE6807; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 30px 25px; /* Jarak dalam dikurangi */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.brand-title {
+    font-size: 24px; /* Dikecilkan dari 28px */
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.qr-container {
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.qr-container svg {
+    width: 190px !important; /* Dikecilkan dari 230px */
+    height: 190px !important;
+}
+
+.table-badge {
+    background-color: #ffffff; 
+    color: #FE6807; 
+    border: 2px solid #FE6807; 
+    padding: 8px 25px; /* Dikecilkan jaraknya */
+    border-radius: 50px;
+    font-size: 18px; /* Dikecilkan dari 22px */
+    font-weight: 800;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(254, 104, 7, 0.15);
+    margin-bottom: 15px;
+}
+
+.instructions {
+    font-size: 11px; /* Teks instruksi disesuaikan */
+    color: #64748b;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.instructions strong {
+    color: #1e293b;
+}
+
+/* =========================================
+   PENGATURAN KHUSUS SAAT MENCETAK (PRINT)
+   ========================================= */
+@media print {
+    @page {
+        size: portrait;
+        margin: 0; /* Menghilangkan teks URL bawaan browser */
+    }
+
+    html, body {
+        background-color: #fff !important; 
+        height: 100vh !important;
+        width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important; 
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .qr-card {
+        box-shadow: none !important; 
+        border: 2px dashed #ccc !important; 
+        border-top: 15px solid #FE6807 !important; 
+        
+        /* Mengatur agar kartu tidak akan pernah menabrak batas atas/bawah kertas */
+        max-height: 95vh !important; 
+        max-width: 90vw !important; 
+        
+        page-break-inside: avoid !important;
+        margin: 0 auto !important;
+        transform: none !important; /* Skala dimatikan agar tidak error di Chrome */
+    }
+
+    /* Penyesuaian ekstra agar 100% muat di kertas saat diprint */
+    .brand-title { font-size: 22px !important; margin-bottom: 2px !important; }
+    .qr-container svg { width: 175px !important; height: 175px !important; }
+    .table-badge { font-size: 17px !important; padding: 6px 20px !important; }
+    .instructions { font-size: 10px !important; margin-top: 8px !important; }
+}

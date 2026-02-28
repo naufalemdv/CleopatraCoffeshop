@@ -1,0 +1,78 @@
+/* public/css/status-pesanan.css */
+
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* Filter Pill Styling */
+.filter-pill {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: #f8f9fa;
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: 0.2s;
+    border: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+}
+
+.filter-pill:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.filter-pill.active {
+    background: #2c3e50;
+    color: #fff;
+    border-color: #2c3e50;
+}
+
+.filter-pill .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.pill-warning .dot { background: #FE6807; }
+.pill-success .dot { background: #129c66; }
+
+.filter-pill.pill-warning.active { background: #FE6807; border-color: #FE6807; color: #fff; }
+.filter-pill.pill-success.active { background: #129c66; border-color: #129c66; color: #fff; }
+
+/* Order Card Styling */
+.order-card {
+    background: #fff;
+    border-radius: 15px;
+    border-top: 5px solid transparent;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.border-processing { border-top-color: #FE6807; }
+.border-finished { border-top-color: #129c66; opacity: 0.8; }
+
+.order-header { padding: 15px 20px; border-bottom: 1px solid #f8f9fa; }
+.order-body { padding: 20px; }
+
+.badge-status { padding: 5px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; }
+.bg-processing { background: #fff4ed; color: #FE6807; }
+.bg-finished { background: #d1f2e5; color: #129c66; }
+
+.border-dashed { border-bottom-style: dashed !important; }
+.text-accent { color: #FE6807; font-size: 0.75rem; }
+
+.btn-outline-custom {
+    color: #FE6807;
+    border: 2px solid #FE6807;
+    background: transparent;
+    transition: 0.2s;
+}
+
+.btn-outline-custom:hover { background-color: #FE6807; color: #fff; }

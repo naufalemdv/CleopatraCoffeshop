@@ -1,0 +1,143 @@
+/* public/css/admin.css */
+
+:root {
+    --primary-bg: #E9F3DA; /* Hijau muda */
+    --accent-color: #FE6807; /* Oranye */
+    --sidebar-bg: #ffffff;
+    --text-dark: #2C3E50;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* =========================================
+   SIDEBAR STYLING
+   ========================================= */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background-color: var(--sidebar-bg);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    position: fixed; 
+    z-index: 1000;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+#sidebar ul li a:hover, #sidebar ul li.active > a {
+    color: var(--accent-color);
+    background: rgba(254, 104, 7, 0.05); 
+    border-left: 4px solid var(--accent-color);
+}
+
+.menu-label {
+    padding: 10px 20px 5px 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #adb5bd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+    border-top: 1px solid #f0f0f0;
+    background: #fff;
+}
+
+/* =========================================
+   MAIN CONTENT AREA & TOPBAR
+   ========================================= */
+#content {
+    width: calc(100% - 250px);
+    margin-left: 250px; 
+    padding: 20px 30px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.topbar {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   GLOBAL COMPONENTS (BUTTONS, CARDS, dll)
+   ========================================= */
+.btn-custom {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.btn-custom:hover {
+    background-color: #e05a06; 
+    color: white;
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+/* Mempercantik Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; 
+}

@@ -1,0 +1,49 @@
+/* public/css/meja.css */
+
+.meja-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.table-custom-meja thead th {
+    background-color: transparent;
+    border-bottom: 2px solid #f0f0f0;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.badge-area {
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #e9ecef;
+}
+
+.status-tersedia {
+    color: #129c66;
+    background-color: #d1f2e5;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.status-terisi {
+    color: #d63333;
+    background-color: #fde1e1;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.capacity-icon {
+    color: var(--accent-color);
+    margin-right: 5px;
+}

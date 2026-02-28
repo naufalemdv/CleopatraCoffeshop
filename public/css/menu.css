@@ -1,0 +1,122 @@
+/* public/css/menu.css */
+
+/* Filter & Search Container */
+.filter-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.search-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.search-input {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px 10px 40px;
+    font-size: 0.9rem;
+    box-shadow: none;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(254, 104, 7, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+}
+
+.filter-select {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    min-width: 200px;
+    color: var(--text-dark);
+}
+
+/* Table Styling */
+.table-custom {
+    vertical-align: middle;
+}
+
+.table-custom thead th {
+    border-bottom: 2px solid #f0f0f0;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 15px 10px;
+}
+
+.table-custom tbody td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #f8f9fa;
+    color: var(--text-dark);
+}
+
+.table-custom tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Teks Menu Bertingkat */
+.menu-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+}
+
+.menu-desc {
+    font-size: 0.8rem;
+    color: #8c98a4;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.kategori-badge {
+    background-color: #f1f3f5;
+    color: #495057;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Toggle Switch (Sesuai Referensi Gambar) */
+.form-switch .form-check-input {
+    width: 2.5em;
+    height: 1.25em;
+    cursor: pointer;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #129c66; /* Hijau aktif */
+    border-color: #129c66;
+}
+
+/* Action Buttons */
+.btn-action {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.btn-action:hover {
+    color: var(--accent-color);
+}

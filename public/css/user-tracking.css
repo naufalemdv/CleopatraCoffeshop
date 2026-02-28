@@ -1,0 +1,112 @@
+/* public/css/user-tracking.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tracking-header {
+    background: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.status-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animasi Putaran saat dimasak */
+@keyframes spinSlow {
+    100% { transform: rotate(360deg); }
+}
+
+.status-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 2.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.status-icon.diproses {
+    background: #FFF7ED;
+    color: #FE6807;
+}
+
+.status-icon.selesai {
+    background: #E8F5E9;
+    color: #129c66;
+}
+
+/* Lingkaran animasi di belakang icon */
+.pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #FFF7ED;
+    z-index: 1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1.3); opacity: 0; }
+}
+
+.invoice-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 20px 20px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.invoice-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.invoice-divider {
+    border-top: 1px dashed #e0e0e0;
+    margin: 15px 0;
+}
+
+.btn-refresh {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 10px 25px;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: 0.2s;
+}
+
+.btn-refresh:active {
+    background: #f8f9fa;
+    transform: scale(0.95);
+}
